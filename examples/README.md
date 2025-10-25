@@ -16,6 +16,7 @@ Then run any example:
 python basic_usage.py
 python with_auto_explain.py
 python invoice_extraction.py
+python pattern_analysis.py
 ```
 
 ## Examples overview
@@ -49,13 +50,25 @@ A realistic scenario simulating invoice data extraction:
 
 **Use this example to**: See how iterata fits into a real ML pipeline
 
+### 4. pattern_analysis.py (NEW - Phase 2)
+
+Advanced pattern detection and statistical analysis:
+- Detecting recurring patterns (by category and field)
+- Identifying transformation patterns
+- Computing detailed statistics
+- Getting actionable recommendations
+- Exporting data (JSON, CSV)
+
+**Use this example to**: Learn how to analyze correction patterns and get insights for improvement
+
 ## Next steps
 
 After running these examples:
 
 1. Explore the generated `corrections_*` directories to see the markdown files
 2. Try modifying the examples with your own data
-3. Implement pattern detection and skill generation (Phase 2-3)
+3. Use pattern analysis to identify areas for improvement
+4. Implement skill generation (Phase 3)
 
 ## Using with real LLMs
 

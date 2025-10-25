@@ -12,6 +12,7 @@ from .core import (
     MarkdownStorage,
     CorrectionLogger,
 )
+from .analysis import PatternDetector, Statistics
 
 __all__ = [
     "Correction",
@@ -22,5 +23,7 @@ __all__ = [
     "IterataConfig",
     "MarkdownStorage",
     "CorrectionLogger",
+    "PatternDetector",
+    "Statistics",
     "__version__",
 ]
