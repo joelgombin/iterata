@@ -1,0 +1,83 @@
+# Examples
+
+This directory contains usage examples for the iterata library.
+
+## Running the examples
+
+Make sure you have installed iterata first:
+
+```bash
+pip install -e ..
+```
+
+Then run any example:
+
+```bash
+python basic_usage.py
+python with_auto_explain.py
+python invoice_extraction.py
+```
+
+## Examples overview
+
+### 1. basic_usage.py
+
+Demonstrates the core functionality:
+- Creating a CorrectionLogger
+- Logging corrections with context
+- Adding explanations manually
+- Loading and reviewing corrections
+
+**Use this example to**: Get started with iterata basics
+
+### 2. with_auto_explain.py
+
+Shows how to use automatic explanation generation:
+- Using MockExplainer for automatic categorization
+- Enabling auto-explain mode
+- Overriding with human explanations
+
+**Use this example to**: Learn about automated correction explanation
+
+### 3. invoice_extraction.py
+
+A realistic scenario simulating invoice data extraction:
+- Processing multiple invoices
+- Logging field-level corrections
+- Adding domain-specific explanations
+- Generating statistics
+
+**Use this example to**: See how iterata fits into a real ML pipeline
+
+## Next steps
+
+After running these examples:
+
+1. Explore the generated `corrections_*` directories to see the markdown files
+2. Try modifying the examples with your own data
+3. Implement pattern detection and skill generation (Phase 2-3)
+
+## Using with real LLMs
+
+To use with Claude instead of MockExplainer:
+
+```python
+from iterata import CorrectionLogger
+from iterata.backends.anthropic import AnthropicExplainer
+
+explainer = AnthropicExplainer(
+    api_key="your-api-key",
+    model="claude-sonnet-4-5-20250929"
+)
+
+logger = CorrectionLogger(
+    base_path="./corrections",
+    explainer=explainer,
+    auto_explain=True
+)
+```
+
+Note: You'll need to install the anthropic extra:
+```bash
+pip install iterata[anthropic]
+```

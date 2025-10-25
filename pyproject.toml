@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "iterata"
+version = "0.1.0"
+description = "Learn from human corrections to improve ML models"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Joël Gombin", email = "joel.gombin@gmail.com" }
+]
+keywords = ["ml", "corrections", "learning", "human-in-the-loop", "claude", "skills", "iterative-learning"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pyyaml>=6.0",
+    "python-frontmatter>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.40.0"]
+openai = ["openai>=1.0.0"]
+cli = ["click>=8.0", "rich>=13.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+
+[project.scripts]
+iterata = "iterata.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/joelgombin/iterata"
+Documentation = "https://github.com/joelgombin/iterata#readme"
+Repository = "https://github.com/joelgombin/iterata"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/iterata"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
