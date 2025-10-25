@@ -13,6 +13,7 @@ from .core import (
     CorrectionLogger,
 )
 from .analysis import PatternDetector, Statistics
+from .skill import SkillGenerator
 
 __all__ = [
     "Correction",
@@ -25,5 +26,6 @@ __all__ = [
     "CorrectionLogger",
     "PatternDetector",
     "Statistics",
+    "SkillGenerator",
     "__version__",
 ]

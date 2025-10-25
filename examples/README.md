@@ -17,6 +17,7 @@ python basic_usage.py
 python with_auto_explain.py
 python invoice_extraction.py
 python pattern_analysis.py
+python skill_generation.py
 ```
 
 ## Examples overview
@@ -61,6 +62,20 @@ Advanced pattern detection and statistical analysis:
 
 **Use this example to**: Learn how to analyze correction patterns and get insights for improvement
 
+### 5. skill_generation.py (NEW - Phase 3)
+
+Complete workflow from corrections to Claude Skill generation:
+- Logging corrections from document extraction
+- Checking readiness for skill generation
+- Generating a complete Claude Skill with:
+  - SKILL.md documentation
+  - Business rules by category
+  - Few-shot learning examples (JSON)
+  - Validation scripts
+- Using the generated skill
+
+**Use this example to**: See the complete end-to-end workflow and generate production-ready Claude Skills
+
 ## Next steps
 
 After running these examples:
@@ -68,7 +83,8 @@ After running these examples:
 1. Explore the generated `corrections_*` directories to see the markdown files
 2. Try modifying the examples with your own data
 3. Use pattern analysis to identify areas for improvement
-4. Implement skill generation (Phase 3)
+4. Generate Claude Skills from your corrections
+5. Integrate generated skills in your production pipeline
 
 ## Using with real LLMs
 
