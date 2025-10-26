@@ -243,9 +243,3 @@ python3 -m pytest --cov=src/iterata --cov-report=term-missing
 python3 examples/basic_usage.py
 ```
 
-## Notes
-
-- All Phase 1 core functionality is working and tested
-- Storage format is human-readable markdown + YAML
-- Backend interface allows easy integration with any LLM
-- Ready to move to Phase 2
