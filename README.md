@@ -358,14 +358,14 @@ If you use iterata in your research or production systems, please cite:
 ```bibtex
 @software{iterata2024,
   title = {iterata: Learn from human corrections to improve ML models},
-  author = {Your Name},
-  year = {2024},
-  url = {https://github.com/yourusername/iterata}
+  author = {Joël Gombin},
+  year = {2025},
+  url = {https://github.com/joelgombin/iterata}
 }
 ```
 
 ## Support
 
 - 📖 Documentation: See [examples/](examples/) and [DEVELOPMENT.md](DEVELOPMENT.md)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/iterata/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/iterata/discussions)
+- 🐛 Issues: [GitHub Issues](https://github.com/joelgombin/iterata/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/joelgombin/iterata/discussions)
