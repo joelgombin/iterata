@@ -14,6 +14,8 @@ from .core import (
 )
 from .analysis import PatternDetector, Statistics
 from .skill import SkillGenerator
+from .loop import CorrectionLoop
+from .decorators import with_correction_tracking, track_corrections
 
 __all__ = [
     "Correction",
@@ -27,5 +29,8 @@ __all__ = [
     "PatternDetector",
     "Statistics",
     "SkillGenerator",
+    "CorrectionLoop",
+    "with_correction_tracking",
+    "track_corrections",
     "__version__",
 ]
