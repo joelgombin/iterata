@@ -18,6 +18,7 @@ python with_auto_explain.py
 python invoice_extraction.py
 python pattern_analysis.py
 python skill_generation.py
+python complete_workflow.py
 ```
 
 ## Examples overview
@@ -76,6 +77,19 @@ Complete workflow from corrections to Claude Skill generation:
 
 **Use this example to**: See the complete end-to-end workflow and generate production-ready Claude Skills
 
+### 6. complete_workflow.py (NEW - Phase 4 & 5)
+
+Production-ready complete workflow demonstrating all features:
+- Using CorrectionLoop unified API
+- Function decorators for automatic tracking
+- YAML configuration files
+- Skill generation and readiness checks
+- Statistics and recommendations
+- Data export (JSON, CSV)
+- Best practices for production
+
+**Use this example to**: See how all features work together in a production environment
+
 ## Next steps
 
 After running these examples:
@@ -86,12 +100,14 @@ After running these examples:
 4. Generate Claude Skills from your corrections
 5. Integrate generated skills in your production pipeline
 
-## Using with real LLMs
+## Using with Claude (Real LLM)
 
-To use with Claude instead of MockExplainer:
+iterata includes a full Claude integration via AnthropicExplainer. To use it:
+
+### Option 1: Direct API Usage
 
 ```python
-from iterata import CorrectionLogger
+from iterata import CorrectionLoop
 from iterata.backends.anthropic import AnthropicExplainer
 
 explainer = AnthropicExplainer(
@@ -99,14 +115,36 @@ explainer = AnthropicExplainer(
     model="claude-sonnet-4-5-20250929"
 )
 
-logger = CorrectionLogger(
+loop = CorrectionLoop(
     base_path="./corrections",
     explainer=explainer,
     auto_explain=True
 )
 ```
 
-Note: You'll need to install the anthropic extra:
+### Option 2: Configuration File
+
+Create `iterata.yaml`:
+
+```yaml
+base_path: ./corrections
+auto_explain: true
+
+backend:
+  provider: anthropic
+  api_key: ${ANTHROPIC_API_KEY}
+  model: claude-sonnet-4-5-20250929
+```
+
+Then use it:
+
+```python
+from iterata import CorrectionLoop
+
+loop = CorrectionLoop.from_config("iterata.yaml")
+```
+
+**Note**: You'll need to install the anthropic extra:
 ```bash
 pip install iterata[anthropic]
 ```
