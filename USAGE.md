@@ -17,8 +17,19 @@ Complete guide for using iterata in your ML pipelines.
 
 ### 1. Installation
 
+> **Note**: iterata is currently in beta. Install directly from GitHub.
+
 ```bash
-pip install iterata[anthropic,cli]
+# Full installation (recommended)
+pip install "git+https://github.com/joelgombin/iterata.git#egg=iterata[anthropic,cli]"
+```
+
+Or for development:
+
+```bash
+git clone https://github.com/joelgombin/iterata.git
+cd iterata
+pip install -e ".[anthropic,cli,dev]"
 ```
 
 ### 2. Initialize a Project

@@ -1,5 +1,11 @@
 # iterata
 
+![Version](https://img.shields.io/badge/version-1.0.0--beta-blue)
+![Python](https://img.shields.io/badge/python-3.9+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Tests](https://img.shields.io/badge/tests-122%20passing-brightgreen)
+![Coverage](https://img.shields.io/badge/coverage-75%25-yellow)
+
 **Learn from human corrections to continuously improve your ML models.**
 
 iterata helps you capture, analyze, and learn from human corrections on ML outputs. It creates a feedback loop that makes your models smarter over time by:
@@ -21,18 +27,42 @@ iterata helps you capture, analyze, and learn from human corrections on ML outpu
 
 ## Installation
 
+> **Note**: iterata is currently in beta. Install directly from GitHub. PyPI release coming soon.
+> **📖 Full installation guide**: See [INSTALL.md](INSTALL.md) for detailed instructions, troubleshooting, and all options.
+
+### From GitHub (Recommended)
+
 ```bash
 # Core functionality
-pip install iterata
+pip install git+https://github.com/joelgombin/iterata.git
 
 # With Claude support
-pip install iterata[anthropic]
+pip install "git+https://github.com/joelgombin/iterata.git#egg=iterata[anthropic]"
 
 # With CLI tools
-pip install iterata[cli]
+pip install "git+https://github.com/joelgombin/iterata.git#egg=iterata[cli]"
 
-# Full installation
-pip install iterata[anthropic,cli]
+# Full installation (recommended)
+pip install "git+https://github.com/joelgombin/iterata.git#egg=iterata[anthropic,cli]"
+```
+
+### Development Installation
+
+For development or to run examples:
+
+```bash
+# Clone the repository
+git clone https://github.com/joelgombin/iterata.git
+cd iterata
+
+# Install in editable mode with all dependencies
+pip install -e ".[anthropic,cli,dev]"
+
+# Run tests
+pytest
+
+# Run examples
+python examples/complete_workflow.py
 ```
 
 ## Quick Start

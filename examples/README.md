@@ -4,10 +4,30 @@ This directory contains usage examples for the iterata library.
 
 ## Running the examples
 
-Make sure you have installed iterata first:
+### Option 1: After Installing from GitHub
+
+If you installed iterata from GitHub:
 
 ```bash
-pip install -e ..
+pip install "git+https://github.com/joelgombin/iterata.git#egg=iterata[anthropic,cli]"
+```
+
+Then run examples directly:
+
+```bash
+# Download examples (if not already cloned)
+git clone https://github.com/joelgombin/iterata.git
+cd iterata/examples
+python complete_workflow.py
+```
+
+### Option 2: Development Mode
+
+If you cloned the repository:
+
+```bash
+# From the repository root
+pip install -e ".[anthropic,cli]"
 ```
 
 Then run any example:
