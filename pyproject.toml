@@ -4,23 +4,39 @@ build-backend = "hatchling.build"
 
 [project]
 name = "iterata"
-version = "0.1.0"
-description = "Learn from human corrections to improve ML models"
+version = "1.0.0"
+description = "Learn from human corrections to continuously improve ML models - with automatic Claude Skills generation"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
 authors = [
     { name = "Joël Gombin", email = "joel.gombin@gmail.com" }
 ]
-keywords = ["ml", "corrections", "learning", "human-in-the-loop", "claude", "skills", "iterative-learning"]
+keywords = [
+    "ml",
+    "machine-learning",
+    "corrections",
+    "learning",
+    "human-in-the-loop",
+    "claude",
+    "anthropic",
+    "skills",
+    "iterative-learning",
+    "pattern-detection",
+    "llm",
+    "document-extraction",
+]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 dependencies = [
@@ -46,8 +62,10 @@ iterata = "iterata.cli:cli"
 
 [project.urls]
 Homepage = "https://github.com/joelgombin/iterata"
-Documentation = "https://github.com/joelgombin/iterata#readme"
+Documentation = "https://github.com/joelgombin/iterata/blob/main/USAGE.md"
 Repository = "https://github.com/joelgombin/iterata"
+"Bug Tracker" = "https://github.com/joelgombin/iterata/issues"
+Changelog = "https://github.com/joelgombin/iterata/releases"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/iterata"]
